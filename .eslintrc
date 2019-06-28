@@ -1,0 +1,7 @@
+{
+  "extends": "react-native-wcandillon",
+  "rules": {
+    "react/prop-types": false,
+    "react/jsx-boolean-value": false
+  }
+}
