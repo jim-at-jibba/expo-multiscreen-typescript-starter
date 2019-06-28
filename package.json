@@ -1,4 +1,14 @@
 {
+  "name": "expo-multi-screen-starter-typescript",
+  "version": "0.0.1",
+  "description": "react native multi screen application starter with expo and typescript",
+  "author": "James Best",
+  "license": "MIT",
+  "keywords": [
+    "expo",
+    "react native",
+    "react navigation"
+  ],
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",

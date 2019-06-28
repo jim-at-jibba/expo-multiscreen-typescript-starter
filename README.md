@@ -7,6 +7,7 @@ This project was originally written by [Caleb Nance](https://github.com/calebnan
 ### Out of the Box
 
 - Expo SDK 33
+- Typescript
 - React Navigation v3
 - Preloading/caching local assets
 - SVG icon usage
