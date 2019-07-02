@@ -12,6 +12,14 @@ This project was originally written by [Caleb Nance](https://github.com/calebnan
 - Preloading/caching local assets
 - SVG icon usage
 - Checker for the iOS notch: iPhoneX, iPhoneXs, iPhoneXr, iPhoneXs Max
+- Typescript paths aliases for main folders
+  ```json
+  "@Components": "./src/components",
+  "@Utils": "./src/utils",
+  "@Hooks": "./src/hooks",
+  "@Types": "./src/types",
+  "@Constants": "./src/constants"
+  ```
 
 ## install
 
