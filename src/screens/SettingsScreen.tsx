@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, ScrollView, Text, View } from "react-native";
-import { NavigationScreenComponent } from "react-navigation";
+import { NavigationStackScreenComponent } from "react-navigation-stack";
 import { fonts, gStyle, images } from "../constants";
 
 const headerImage = __DEV__ ? "rabbitDev" : "rabbitProd";
@@ -14,7 +14,7 @@ const headerTitle = (
   </View>
 );
 
-const SettingsScreen: NavigationScreenComponent = () => (
+const SettingsScreen: NavigationStackScreenComponent = () => (
   <View style={gStyle.container}>
     <ScrollView contentContainerStyle={gStyle.contentContainer}>
       <Text style={gStyle.text}>Settings Content Area</Text>

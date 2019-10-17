@@ -1,17 +1,23 @@
 import React from "react";
 import { Platform, StatusBar, View } from "react-native";
-import { AppLoading, ScreenOrientation } from "expo";
-import { device, func, gStyle } from "./src/constants";
+import { AppLoading } from "expo";
+import { func, gStyle } from "./src/constants";
 
 // navigation switch
 import AppSwitchNav from "./src/navigation/AppSwitchNav";
 
-class App extends React.Component {
-  constructor(props) {
+interface Props {}
+interface State {
+  isLoading: boolean;
+  theme: "light" | "dark";
+}
+class App extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
-      isLoading: true
+      isLoading: true,
+      theme: "light"
     };
 
     // iPad? (TODO in future android tablet checked)
@@ -23,7 +29,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, theme } = this.state;
+    const iOSStatusType = theme === "light" ? "dark-content" : "light-content";
 
     if (isLoading) {
       return (
@@ -37,7 +44,7 @@ class App extends React.Component {
     return (
       <View style={gStyle.container}>
         <StatusBar
-          barStyle={Platform.OS === "ios" ? "dark-content" : "light-content"}
+          barStyle={Platform.OS === "ios" ? iOSStatusType : "light-content"}
         />
 
         <AppSwitchNav />

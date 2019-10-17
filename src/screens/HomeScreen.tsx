@@ -1,13 +1,13 @@
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
-import { SafeAreaView } from "react-navigation";
+import { NavigationStackScreenComponent } from "react-navigation-stack";
 import { gStyle } from "../constants";
 
 // components
 import Touch from "../components/Touch";
 
-const HomeScreen = ({ navigation }) => (
-  <SafeAreaView style={gStyle.container}>
+const HomeScreen: NavigationStackScreenComponent = ({ navigation }) => (
+  <View style={gStyle.container}>
     <ScrollView contentContainerStyle={gStyle.contentContainer}>
       <Text style={gStyle.text}>Home Content Area 2</Text>
 
@@ -15,10 +15,10 @@ const HomeScreen = ({ navigation }) => (
 
       <Touch
         onPress={() => navigation.navigate("MultiBase")}
-        text="jump to Multi tab"
+        text='jump to Multi tab'
       />
     </ScrollView>
-  </SafeAreaView>
+  </View>
 );
 
 HomeScreen.navigationOptions = {

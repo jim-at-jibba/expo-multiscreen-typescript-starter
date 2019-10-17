@@ -1,30 +1,24 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import {
-  NavigationScreenComponent,
-  NavigationScreenProps
-} from "react-navigation";
+import { NavigationStackScreenComponent } from "react-navigation-stack";
 import { colors, gStyle } from "../constants";
 // components
 import Touch from "../components/Touch";
 
 // interface Props extends NavigationScreenProps {}
 
-const MultiBaseScreen: NavigationScreenComponent<NavigationScreenProps> = ({
-  navigation
-}) => (
+const MultiBaseScreen: NavigationStackScreenComponent = ({ navigation }) => (
   <View style={styles.container}>
     <ScrollView
       style={styles.container}
-      contentContainerStyle={styles.contentContainer}
-    >
+      contentContainerStyle={styles.contentContainer}>
       <Text style={gStyle.text}>Multi Screens Content Area</Text>
 
       <View style={gStyle.spacer80} />
 
       <Touch
         onPress={() => navigation.navigate("MultiLevel2")}
-        text="go to level 2"
+        text='go to level 2'
       />
     </ScrollView>
   </View>

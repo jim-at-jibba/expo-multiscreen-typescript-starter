@@ -1,9 +1,9 @@
 import React from "react";
 import { ScrollView, Text, View } from "react-native";
-import { NavigationScreenComponent } from "react-navigation";
+import { NavigationStackScreenComponent } from "react-navigation-stack";
 import { gStyle } from "../constants";
 
-const StatsScreen: NavigationScreenComponent = () => (
+const StatsScreen: NavigationStackScreenComponent = () => (
   <View style={gStyle.container}>
     <ScrollView contentContainerStyle={gStyle.contentContainer}>
       <Text style={gStyle.text}>Stats Content Area</Text>
